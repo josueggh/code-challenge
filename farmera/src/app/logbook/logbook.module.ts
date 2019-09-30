@@ -1,0 +1,27 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+import { IonicModule } from '@ionic/angular';
+
+import { LogbookPage } from './logbook.page';
+import { HeaderComponent } from '../component/header/header.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: LogbookPage
+  }
+];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    RouterModule.forChild(routes)
+  ],
+  declarations: [LogbookPage, HeaderComponent]
+})
+export class LogbookPageModule {}
