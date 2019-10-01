@@ -5,15 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
-import { HeaderComponent } from '../component/header/header.component';
 import { TeamCardComponent } from '../component/team-card/team-card.component';
 import { AlertComponent } from '../component/alert/alert.component';
+import { HeaderModule } from '../component/header/header.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    HeaderModule,
     RouterModule.forChild([
       {
         path: '',
@@ -21,6 +22,6 @@ import { AlertComponent } from '../component/alert/alert.component';
       }
     ])
   ],
-  declarations: [HomePage, HeaderComponent, TeamCardComponent, AlertComponent ]
+  declarations: [HomePage, TeamCardComponent, AlertComponent ]
 })
 export class HomePageModule {}
