@@ -1,9 +1,18 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'),
+    local('Roboto-Regular'),
+    url(/assets/roboto/MaterialIcons-Regular.ttf) format('truetype');
+}
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
+  --ion-font-family: 'Roboto';
   --ion-color-primary: #263238;
   --ion-color-primary-rgb: 38, 50, 56;
   --ion-color-primary-contrast: #ffffff;
@@ -76,18 +85,9 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-@font-face {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'),
-    local('Roboto-Regular'),
-    url(/assets/roboto/MaterialIcons-Regular.ttf) format('truetype');
-}
 
-* {
-  font-family: 'Roboto';
-}
+
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
