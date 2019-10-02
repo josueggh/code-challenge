@@ -15,5 +15,7 @@ export const generalInfo = functions.https.onRequest((request, response) => {
         group_id: randomNumberBetween(20000,99000),
         start_at: randomDateBetween( new Date(2018, 0, 1), new Date())
     };
-    response.json(mock_data);
+    return response
+        .set({ 'Access-Control-Allow-Origin': '*' })
+        .json(mock_data);
 });
