@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController} from '@ionic/angular';
 import { PigService } from '../../services/pigs.service';
+import { InfoService, Info } from 'src/app/services/info.service';
 
 @Component({
   selector: 'farmera-header',
@@ -8,10 +9,13 @@ import { PigService } from '../../services/pigs.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+   
+  info: Info;
 
   constructor(
     private actionSheetCtrl: ActionSheetController,
     private pigService: PigService,
+    private generalInfo: InfoService
     ) { }
 
   async presentActions() {
@@ -31,11 +35,13 @@ export class HeaderComponent implements OnInit {
         handler: this.pigService.salePig
       }]
     });
-
     await actionSheet.present();
-
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.generalInfo.get().subscribe( data => {
+      this.info = data;
+    });
+  }
 
 }

@@ -16,7 +16,6 @@ export class TeamCardComponent implements OnInit {
   ngOnInit() {
     this.team.getMembers(this.limit).subscribe( members => {
       this.members = members;
-      console.log(this.members);
     });
   }
 

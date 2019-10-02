@@ -3,13 +3,13 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <h4>1,345 pigs</h4>
-          <p>7 weeks old</p>
+          <h4>{{ info?.number_pigs }}</h4>
+          <p>{{ info?.weeks_old }} weeks old</p>
           <ion-button color="secondary" (click)="presentActions()" fill="outline">Manage Pigs</ion-button>
         </ion-col>
-        <ion-col text-right>
-          <p>Group: 20190214</p>
-          <p>Started: 2018/09/01</p>
+        <ion-col class="ion-text-right">
+          <p>Group: {{ info?.group_id }}</p>
+          <p>Started:{{ info?.start_at | date:'yyyy/MM/dd' }}</p>
           <ion-button
             [routerLink]="['/logbook']"
             routerLinkActive="router-link-active">
