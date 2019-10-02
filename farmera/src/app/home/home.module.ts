@@ -8,6 +8,7 @@ import { HomePage } from './home.page';
 import { TeamCardComponent } from '../component/team-card/team-card.component';
 import { AlertComponent } from '../component/alert/alert.component';
 import { HeaderModule } from '../component/header/header.module';
+import { MemberComponent } from '../component/member/member.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,6 @@ import { HeaderModule } from '../component/header/header.module';
       }
     ])
   ],
-  declarations: [HomePage, TeamCardComponent, AlertComponent ]
+  declarations: [HomePage, TeamCardComponent, AlertComponent, MemberComponent ]
 })
 export class HomePageModule {}

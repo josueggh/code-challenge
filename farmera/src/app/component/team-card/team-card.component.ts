@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TeamService, Member } from '../../services/team.service';
 
 @Component({
   selector: 'farmera-team-card',
@@ -7,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamCardComponent implements OnInit {
 
-  constructor() { }
+  members: Member[];
+  limit = 3;
 
-  ngOnInit() {}
+  constructor( private team: TeamService ) { }
+
+  ngOnInit() {
+    this.team.getMembers(this.limit).subscribe( members => {
+      this.members = members;
+      console.log(this.members);
+    });
+  }
 
 }

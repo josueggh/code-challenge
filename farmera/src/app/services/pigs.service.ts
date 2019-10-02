@@ -8,11 +8,10 @@ export class PigService {
   addPig() {
     console.log('Add pig 🐷');
   }
-  movePig(){
+  movePig() {
     console.log('Move pig 🚛');
   }
-  salePig(){
+  salePig() {
     console.log('Sale pig 💰');
   }
-
 }

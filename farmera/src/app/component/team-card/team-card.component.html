@@ -1,26 +1,10 @@
-<ion-title>Team (3)</ion-title>
+<ion-title>Team ({{limit}})</ion-title>
 <ion-card>
   <ion-card-content>
     <ion-grid>
-      <ion-row>
-        <ion-col size="8">
-          <ion-avatar float-left>
-            <ion-img
-              src="https://randomuser.me/api/portraits/thumb/men/38.jpg"
-            ></ion-img>
-          </ion-avatar>
-          <ion-card-title>Alan Thompson</ion-card-title>
-          <p>last check in: 11 hr ago</p>
-        </ion-col>
-        <ion-col text-right size="4">
-          <ion-button class="button--rounded" color="primary">
-            <i class="material-icons">message</i>
-          </ion-button>
-          <ion-button class="button--rounded">
-            <i class="material-icons">call</i>
-          </ion-button>
-        </ion-col>
-      </ion-row>
+      <farmera-member [Member]="member" *ngFor="let member of members"></farmera-member>
+
+      
     </ion-grid>
   </ion-card-content>
 </ion-card>
