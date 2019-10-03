@@ -2,9 +2,12 @@
 <ion-card>
   <ion-card-content>
     <ion-grid>
-      <farmera-member [Member]="member" *ngFor="let member of members"></farmera-member>
-
-      
+      <farmera-member [Member]="member" *ngFor="let member of (members | slice: members?.length - display)"></farmera-member>
     </ion-grid>
+
+    <div class="ion-text-center" (click)="hideOrShow()"> 
+      <span class="material-icons">{{display===1?'expand_more':'expand_less'}}</span>
+    </div>
+
   </ion-card-content>
 </ion-card>
