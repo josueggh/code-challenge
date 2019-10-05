@@ -1,3 +1,47 @@
-.material-icons{
-    font-size: 30px;
+@import "../../../theme/common.scss";
+
+.main-title{
+    @extend .main-title--style;
+}
+.alert{
+    box-shadow: $card-shadow;
+    border-radius: $card-radius;
+
+    &--name{
+        font-size:16px;
+        font-weight: 500;
+    }
+    &--danger{
+        color: #b61313;
+    }
+    &--success{
+        color: #3c7d0c;
+    }
+    &--warning{
+        color: #faca0c;
+    }
+    &--description{
+        font-size: 14px;
+        span{
+            color: #888888;
+            font-size: 80%;
+        }
+    }
+
+    .material-icons{
+        font-size: 28px;
+        color:#9e9e9e;
+        margin-top: 5px;
+    }
+
+    .custom-icon{
+        display: inline-block;
+        background-image: url(/assets/icon/alert-icon.png);
+        width: 16px;
+        background-position: center;
+        height: 16px;
+        margin-right: 3px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }

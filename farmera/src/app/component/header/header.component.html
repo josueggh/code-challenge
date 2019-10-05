@@ -1,19 +1,26 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-grid>
+  <ion-toolbar >
+    <ion-grid class="header header--gradient"> 
       <ion-row>
         <ion-col>
-          <h4>{{ info?.number_pigs }}</h4>
+          <p class="text text--main text--highlight">{{ info?.number_pigs | number }} pigs</p>
           <p>{{ info?.weeks_old }} weeks old</p>
-          <ion-button color="secondary" (click)="presentActions()" fill="outline">Manage Pigs</ion-button>
+          <ion-button 
+            class="button button--manage" 
+            (click)="presentActions()" 
+            fill="outline">
+              Manage Pigs
+          </ion-button>
         </ion-col>
         <ion-col class="ion-text-right">
-          <p>Group: {{ info?.group_id }}</p>
+          <p class="text text--mt4">Group: <span class="text text--highlight">{{ info?.group_id }}</span> </p>
           <p>Started:{{ info?.start_at | date:'yyyy/MM/dd' }}</p>
           <ion-button
+            class="button button--link"
             [routerLink]="['/logbook']"
             routerLinkActive="router-link-active">
-            LogBook
+              <span class="custom-icon"></span> 
+              LogBook
           </ion-button>
         </ion-col>
       </ion-row>

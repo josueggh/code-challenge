@@ -1,0 +1,9 @@
+@import "../../../theme/common.scss";
+
+.main-title{
+    @extend .main-title--style;
+}
+.main-card{
+    box-shadow: $card-shadow;
+    border-radius: $card-radius;
+}

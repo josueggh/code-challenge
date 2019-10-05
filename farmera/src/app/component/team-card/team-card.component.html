@@ -1,5 +1,5 @@
-<ion-title>Team ({{limit}})</ion-title>
-<ion-card>
+<h1 class="main-title">Team ({{limit}})</h1>
+<ion-card class="main-card">
   <ion-card-content>
     <ion-grid>
       <farmera-member [Member]="member" *ngFor="let member of (members | slice: members?.length - display)"></farmera-member>

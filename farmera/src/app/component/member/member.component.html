@@ -1,19 +1,24 @@
 <ion-row>
-    <ion-col size="8">
+    <ion-col size="8" class="person">
       <ion-avatar class="ion-float-left">
-        <ion-img
+        <ion-img 
+          class="img--avatar"
           [src]="Member.avatar"
         ></ion-img>
       </ion-avatar>
-      <ion-card-title>{{Member.name}} </ion-card-title>
-      <p>last check in: {{Member.last_checkin}} hr ago</p>
+      <ion-card-title class="name">{{Member.name}} </ion-card-title>
+      <p class="lastcheckin">last check in: {{Member.last_checkin}} hr ago</p>
     </ion-col>
     <ion-col class="ion-text-right" size="4">
-      <ion-button class="button--rounded" color="primary">
+      <ion-button 
+        fill="outline"
+        class="button__message button--rounded ">
         <i class="material-icons">message</i>
       </ion-button>
-      <ion-button class="button--rounded">
-        <i class="material-icons">call</i>
+      <ion-button
+          fill="outline"
+          class="button__call button--rounded">
+          <i class="material-icons">call</i>
       </ion-button>
     </ion-col>
   </ion-row>
