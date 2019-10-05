@@ -1,14 +1,17 @@
-<h1 class="main-title">Alerts (1)</h1>
-<ion-card class="alert">
+<h1 class="main-title">Alerts ({{alerts?.length}})</h1>
+
+<div ></div>
+
+<ion-card class="alert" *ngFor="let alert of alerts">
   <ion-card-content>
     <ion-grid>
       <ion-row>
         <ion-col>
           <ion-card-title class="alert--name">
               <span class="custom-icon"></span> 
-              Water cons. alert
+              {{alert.name}}
           </ion-card-title>
-          <p class="alert--description alert--danger">0.48 gal avg. per day <span>2 hours ago</span></p>
+          <p class="alert--description alert--danger">{{alert.value}} <span>{{alert.reported_at}}</span></p>
         </ion-col>
         <ion-col class="ion-text-right" size="4">
           <i class="material-icons">vibration</i>

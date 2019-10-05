@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertService, Alert } from 'src/app/services/alert.service';
 
 @Component({
   selector: 'farmera-alert',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlertComponent implements OnInit {
 
-  constructor() { }
+  alerts: Alert[];
 
-  ngOnInit() {}
+  constructor(private alertService: AlertService) { }
+
+  ngOnInit() {
+    this.alertService.get().subscribe( alerts => {
+      this.alerts = alerts;
+    });
+  }
 
 }

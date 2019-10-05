@@ -19,3 +19,17 @@ export const generalInfo = functions.https.onRequest((request, response) => {
         .set({ 'Access-Control-Allow-Origin': '*' })
         .json(mock_data);
 });
+
+export const alerts = functions.https.onRequest((request, response) => {
+    const mock_data = [{
+        name : 'Water const. alert',
+        value: '0.48 gal avg. per day',
+        reported_at: '2 hours ago',
+        type: 'danger',
+        icon: 'alert-icon',
+        created_at: randomDateBetween( new Date(2018, 0, 1), new Date())
+    }];
+    return response
+        .set({ 'Access-Control-Allow-Origin': '*' })
+        .json(mock_data);
+});
