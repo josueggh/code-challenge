@@ -1,0 +1,18 @@
+@import "../../theme/common.scss";
+
+.header--gradient{
+    background: $gradient;
+    color: white;
+    padding:15px;
+}
+.material-icons{
+    margin-right: 10px;
+}
+
+.button{
+    &__submit{
+        --background: #d1da59;
+        --background-hover: #bac346;
+        color: #323c39;
+    }
+}
