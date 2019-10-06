@@ -9,6 +9,7 @@ import { TeamCardComponent } from '../component/team-card/team-card.component';
 import { AlertComponent } from '../component/alert/alert.component';
 import { HeaderModule } from '../component/header/header.module';
 import { MemberComponent } from '../component/member/member.component';
+import { TabsModule } from '../component/tabs/tabs.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { MemberComponent } from '../component/member/member.component';
     FormsModule,
     IonicModule,
     HeaderModule,
+    TabsModule,
     RouterModule.forChild([
       {
         path: '',
@@ -23,6 +25,6 @@ import { MemberComponent } from '../component/member/member.component';
       }
     ])
   ],
-  declarations: [HomePage, TeamCardComponent, AlertComponent, MemberComponent ]
+  declarations: [HomePage, TeamCardComponent, AlertComponent, MemberComponent  ]
 })
 export class HomePageModule {}

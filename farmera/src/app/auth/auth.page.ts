@@ -23,7 +23,7 @@ export class AuthPage implements OnInit {
 
   ngOnInit() {
   }
- 
+
   authenticate(email: string, password: string) {
     this.isLoading = true;
     this.loadingCtrl
