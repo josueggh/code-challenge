@@ -1,5 +1,7 @@
+@import "../../../theme/common.scss";
+
 .header--gradient{
-    background: linear-gradient( 232deg, #4b626e, #263232 );
+    background: $gradient;
     color: white;
     padding:15px;
     p{
