@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActionSheetController} from '@ionic/angular';
 import { PigService } from '../../services/pigs.service';
 import { InfoService, Info } from 'src/app/services/info.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'farmera-header',
@@ -15,7 +16,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private actionSheetCtrl: ActionSheetController,
     private pigService: PigService,
-    private generalInfo: InfoService
+    private generalInfo: InfoService,
+    private router: Router
     ) { }
 
   async presentActions() {

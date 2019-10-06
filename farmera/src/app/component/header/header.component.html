@@ -16,11 +16,20 @@
           <p class="text text--mt4">Group: <span class="text text--highlight">{{ info?.group_id }}</span> </p>
           <p>Started:{{ info?.start_at | date:'yyyy/MM/dd' }}</p>
           <ion-button
+            *ngIf="router.url !== '/logbook'"
             class="button button--link"
             [routerLink]="['/logbook']"
             routerLinkActive="router-link-active">
               <span class="custom-icon"></span> 
               LogBook
+          </ion-button>
+          <ion-button
+            *ngIf="router.url === '/logbook'"
+            class="button button--link"
+            [routerLink]="['/home']"
+            routerLinkActive="router-link-active">
+              <span class="material-icons">home</span> 
+              Go Home
           </ion-button>
         </ion-col>
       </ion-row>
